@@ -1,0 +1,63 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: black;
+}
+
+.container
+{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 3%;
+    margin-left: 15px;
+}
+
+input
+{
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+    background-color: #181818;
+    border: solid 2px red;
+    border-radius: 35px;
+    outline: none;
+    color: white;
+    caret-color: cyan;
+    transform: translate(0, -50%);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+input:hover
+{
+    border-color: cyan;
+}
+
+input::placeholder
+{
+    color: gray;
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+}
+
+input:focus::placeholder
+{
+    opacity: 1;
+}
+
+input:focus,
+input:not(:placeholder-shown)
+{
+    width: 350px;
+    border-color: cyan;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 cyan;
+}
